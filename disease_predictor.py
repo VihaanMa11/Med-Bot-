@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 class DiseasePredictor:
     def __init__(self):
         """Initialize the disease predictor."""
-        self.data_dir = "data"
+        self.data_dir = "attached_assets"
         self.symptom_severity = None
         self.symptom_description = None
         self.training_data = None
@@ -18,36 +18,39 @@ class DiseasePredictor:
         self.all_symptoms = None
         self.disease_descriptions = None
         self.precautions = None
+        self.symptom_columns = None  # Store actual symptom column names
         self.load_data()
         
     def load_data(self):
         """Load necessary datasets for prediction."""
         try:
-            # Load symptom severity data
-            self.symptom_severity = pd.read_csv(f"attached_assets/Symptom-severity.csv")
+            # The format of the CSV files is different from what we expected
+            # Let's check what we're dealing with and adapt
             
-            # Load training data
-            self.training_data = pd.read_csv(f"attached_assets/Training.csv")
+            # First, examine the Training.csv file structure
+            # In this dataset, the first row contains symptom names
+            # and the last column is the disease/prognosis
+            training_df = pd.read_csv(f"{self.data_dir}/Training.csv")
+            logger.debug(f"Training data columns: {training_df.columns.tolist()}")
+            logger.debug(f"Training data shape: {training_df.shape}")
+            
+            self.training_data = training_df
+            
+            # Load symptom severity data
+            self.symptom_severity = pd.read_csv(f"{self.data_dir}/Symptom-severity.csv")
             
             # Get disease descriptions
-            self.disease_descriptions = pd.read_csv(f"attached_assets/description.csv")
+            self.disease_descriptions = pd.read_csv(f"{self.data_dir}/description.csv")
             
             # Get precautions
-            self.precautions = pd.read_csv(f"attached_assets/precautions_df.csv")
+            self.precautions = pd.read_csv(f"{self.data_dir}/precautions_df.csv")
             
-            # Extract all unique symptoms from the training data
-            # First, get the column names that contain symptoms
-            symptom_cols = [col for col in self.training_data.columns if col != 'prognosis']
+            # Store the symptom columns for later use
+            self.symptom_columns = [col for col in self.training_data.columns if col != 'prognosis']
             
-            # Create a set of all symptoms
-            all_symptoms = set()
-            for col in symptom_cols:
-                # Add non-NaN symptoms to the set
-                symptoms = self.training_data[col].dropna().unique()
-                all_symptoms.update(symptoms)
-            
-            # Remove any empty strings
-            self.all_symptoms = sorted([s for s in all_symptoms if isinstance(s, str) and s.strip()])
+            # For our symptom categories, we need unique symptom names
+            # from the column headers (not from the data itself)
+            self.all_symptoms = [col for col in self.training_data.columns if col != 'prognosis']
             
             # Create a symptom encoder (mapping symptoms to indices)
             self.symptom_encoder = {symptom: i for i, symptom in enumerate(self.all_symptoms)}
@@ -118,38 +121,75 @@ class DiseasePredictor:
             list: Top predicted diseases with probabilities
         """
         try:
+            logger.debug(f"Received symptoms for prediction: {symptoms}")
+            
             # Ensure symptoms are standardized
             symptoms = [s.lower().strip().replace(' ', '_') for s in symptoms]
+            logger.debug(f"Standardized symptoms: {symptoms}")
+            
+            # Create input symptoms vector
+            # After examining the CSV, we understand that:
+            # - The first row contains column names (which are the symptoms)
+            # - Each row has 1/0 values indicating presence of symptoms
+            # - First we need to identify which columns correspond to our input symptoms
             
             # Count disease occurrences in the training data
             disease_counts = self.training_data['prognosis'].value_counts().to_dict()
+            logger.debug(f"Found {len(disease_counts)} unique diseases in training data")
             
             # Calculate disease probabilities based on symptoms
             disease_scores = defaultdict(float)
             total_symptoms = len(symptoms)
+            logger.debug(f"Total symptom count: {total_symptoms}")
             
-            # Go through all rows in the training data
+            # For each disease in the training data, calculate match score
+            disease_symptom_scores = {}
+            
+            # Each row represents a specific disease case
             for _, row in self.training_data.iterrows():
-                disease = row['prognosis']
-                matching_symptoms = 0
+                disease_name = row['prognosis']
                 
-                # Check each symptom column
-                for col in self.training_data.columns:
-                    if col == 'prognosis':
-                        continue
+                # Check how many of the user's symptoms match this disease case
+                # In this dataset, each disease has symptoms marked as 1 in the corresponding columns
+                matching_score = 0
+                
+                # Create a symptom profile for this disease case
+                disease_symptoms = []
+                
+                for col in self.symptom_columns:
+                    # If this column (symptom) is marked as present (1) for this disease
+                    if pd.notna(row[col]) and row[col] == 1:
+                        disease_symptoms.append(col)
+                        
+                        # Check if this symptom is in the user's input
+                        if col in symptoms:
+                            matching_score += 1
+                
+                # Calculate a match score
+                if matching_score > 0 and disease_symptoms:
+                    # Score = (matching symptoms / total user symptoms) * (matching symptoms / total disease symptoms)
+                    # This balances recall and precision
+                    recall = matching_score / total_symptoms  # How many of user's symptoms match
+                    precision = matching_score / len(disease_symptoms)  # How specific is the match to this disease
+                    score = (recall + precision) / 2
                     
-                    # If the symptom exists in this disease case, and is in user's symptoms
-                    if pd.notna(row[col]) and row[col] in symptoms:
-                        matching_symptoms += 1
-                
-                # Calculate score for this disease based on matching symptoms ratio
-                if matching_symptoms > 0:
-                    # Score = (matching symptoms / total symptoms) * disease prior probability
-                    score = (matching_symptoms / total_symptoms) * (disease_counts[disease] / len(self.training_data))
-                    disease_scores[disease] += score
+                    # Aggregate scores by disease name (multiple rows might have same disease)
+                    if disease_name in disease_symptom_scores:
+                        if score > disease_symptom_scores[disease_name]:
+                            disease_symptom_scores[disease_name] = score
+                    else:
+                        disease_symptom_scores[disease_name] = score
+                    
+                    logger.debug(f"Disease {disease_name} score: {score:.4f} (matching: {matching_score}/{len(disease_symptoms)})")
+            
+            # Check if we found any matches
+            if not disease_symptom_scores:
+                logger.warning("No matching diseases found for the provided symptoms!")
+                return []
             
             # Get top 3 diseases with highest scores
-            top_diseases = sorted(disease_scores.items(), key=lambda x: x[1], reverse=True)[:3]
+            top_diseases = sorted(disease_symptom_scores.items(), key=lambda x: x[1], reverse=True)[:3]
+            logger.debug(f"Top diseases: {top_diseases}")
             
             # For each disease, get its description and precautions
             results = []
