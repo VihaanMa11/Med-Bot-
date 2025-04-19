@@ -1,0 +1,216 @@
+Go through each main symptom category and ask if the user has any symptoms in that category (Yes/No questions):
+
+🧴 Skin and Hair
+"Do you have any skin or hair-related issues?"
+If Yes, ask user to choose from:
+
+Itching
+
+Skin rash
+
+Nodal skin eruptions
+
+Red spots over body
+
+Pus-filled pimples
+
+Blackheads
+
+Scurring
+
+Skin peeling
+
+Silver-like dusting
+
+Small dents in nails
+
+Inflammatory nails
+
+🌬️ Respiratory System
+"Are you experiencing any respiratory symptoms?"
+If Yes, provide options:
+
+Continuous sneezing
+
+Shivering
+
+Chills
+
+Cough
+
+High fever
+
+Breathlessness
+
+Phlegm
+
+Throat irritation
+
+Runny nose
+
+Congestion
+
+🍽️ Digestive System
+"Do you have any digestive system issues?"
+If Yes, list options:
+
+Stomach pain
+
+Acidity
+
+Vomiting
+
+Diarrhoea
+
+Constipation
+
+Abdominal pain
+
+Belly pain
+
+Loss of appetite
+
+Indigestion
+
+❤️ Cardiovascular System
+"Any chest or heart-related issues?"
+
+Chest pain
+
+Fast heart rate
+
+🦴 Musculoskeletal System
+"Any joint or muscle discomfort?"
+
+Joint pain
+
+Muscle weakness
+
+Painful walking
+
+💤 General Symptoms
+"Do you have general body symptoms like fatigue or weight changes?"
+
+Fatigue
+
+Weight loss
+
+Restlessness
+
+Lethargy
+
+Malaise
+
+Swelling of stomach
+
+Weakness of one body side
+
+🧠 Neurological Symptoms
+"Any neurological issues like dizziness or balance problems?"
+
+Headache
+
+Dizziness
+
+Loss of balance
+
+Slurred speech
+
+🧘 Psychological Symptoms
+"Are you feeling emotionally unwell?"
+
+Mood swings
+
+Anxiety
+
+Irritability
+
+Depression
+
+🚽 Urinary Symptoms
+"Any urinary discomfort?"
+
+Bladder discomfort
+
+Foul smell of urine
+
+Continuous feel of urine
+
+🔻 Reproductive Symptoms
+
+Spotting urination
+
+Pain during urination
+
+Yellow urination
+
+🔁 Endocrine System
+"Noticed any appetite or weight changes?"
+
+Increased appetite
+
+Sweating
+
+Weight gain
+
+Polyuria
+
+👁️ Vision-Related Symptoms
+
+Blurred and distorted vision
+
+Redness of eyes
+
+Sinus pressure
+
+Swollen eyes
+
+Visual disturbances
+
+👂 Hearing and Ear
+
+Ear pain
+
+Ear discharge
+
+Ringing in ears
+
+🧬 Lymphatic System
+
+Swelled lymph nodes
+
+⚡ Metabolic Symptoms
+
+Loss of smell
+
+Muscle pain
+
+High fever
+
+Collect all selected symptoms.
+
+Analyze symptoms using the disease prediction model from https://github.com/VihaanMa11/health:
+
+Use the Training.csv or Testing.csv symptom matrix.
+
+Feed the binary-encoded symptoms into the trained model (Random Forest or Decision Tree).
+
+Output top 1–3 most likely diseases.
+
+Respond to the user with the analysis:
+
+"Based on the symptoms you provided, here are the most likely conditions:"
+
+1. [Disease Name] – short description
+
+2. [Disease Name] – short description
+
+I recommend consulting a doctor for proper diagnosis and treatment.
+
+Note for developers: Implement the chatbot logic using frameworks like:
+
+Streamlit or Gradio for UI
+
+Scikit-learn for disease prediction (same as in the GitHub project)
+
+Optionally integrate with Dialogflow, Rasa, or LangChain for conversational memory and flow

@@ -236,3 +236,67 @@ footer {
     background-color: rgba(13, 202, 240, 0.1);
     border-color: rgba(13, 202, 240, 0.2);
 }
+
+/* Diagnostic feature styling */
+.diagnostic-options {
+    width: 100%;
+    margin: 10px 0 15px;
+    clear: both;
+}
+
+#startDiagnostic {
+    transition: all 0.3s ease;
+}
+
+#startDiagnostic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#startDiagnostic i {
+    transition: all 0.3s ease;
+}
+
+#startDiagnostic:hover i {
+    transform: rotate(15deg);
+}
+
+.option-button {
+    transition: all 0.2s ease;
+    border-radius: 20px;
+    padding: 6px 15px;
+}
+
+.option-button:hover {
+    transform: translateY(-2px);
+}
+
+.diagnostic-symptoms-form {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.diagnostic-symptoms-form .form-check {
+    margin-bottom: 8px;
+}
+
+.diagnostic-symptoms-form .form-check-label {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.diagnostic-symptoms-form .form-check-input:checked + .form-check-label {
+    color: var(--bs-primary);
+    font-weight: 500;
+}
+
+.diagnostic-response .message-content {
+    background-color: var(--bs-success);
+}
+
+.diagnostic-response .message-content:after {
+    background-color: var(--bs-success);
+}
