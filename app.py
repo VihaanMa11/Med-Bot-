@@ -34,12 +34,13 @@ def chat():
         session_id = data.get('session_id', 'default')
         is_diagnostic = data.get('is_diagnostic', False)
         
-        if not user_query.strip():
-            return jsonify({'response': 'Please enter a valid health-related question.'})
-        
         # Handle diagnostic chat if active
         if is_diagnostic:
             return handle_diagnostic_chat(user_query, session_id)
+        
+        # For regular chat, ensure we have a non-empty string
+        if not isinstance(user_query, str) or not user_query.strip():
+            return jsonify({'response': 'Please enter a valid health-related question.'})
         
         # Check for special commands
         if user_query.lower() == "start diagnostic":

@@ -124,7 +124,8 @@ class DiagnosticChat:
     def _process_response(self, response):
         """Process the user's response based on current state."""
         if self.current_state == "category_question":
-            if response.lower() in ["yes", "y"]:
+            # Convert string responses to lowercase for comparison
+            if isinstance(response, str) and response.lower() in ["yes", "y"]:
                 # Move to symptom selection for this category
                 self.current_state = "symptoms_selection"
             else:
@@ -135,9 +136,26 @@ class DiagnosticChat:
         elif self.current_state == "symptoms_selection":
             # Add selected symptoms to the list
             if isinstance(response, list):
+                # It's already a list of symptoms
                 self.selected_symptoms.extend(response)
-            elif isinstance(response, str) and response.strip():
-                self.selected_symptoms.append(response.strip())
+            elif isinstance(response, str):
+                try:
+                    # It might be a JSON string representation of a list
+                    import json
+                    symptoms_list = json.loads(response)
+                    if isinstance(symptoms_list, list):
+                        self.selected_symptoms.extend(symptoms_list)
+                    else:
+                        # Just a single symptom as string
+                        self.selected_symptoms.append(response.strip())
+                except:
+                    # Not JSON, treat as a single symptom
+                    if response.strip():
+                        self.selected_symptoms.append(response.strip())
+            
+            # Debug log
+            logger.debug(f"Added symptoms: {response}")
+            logger.debug(f"Total selected symptoms: {self.selected_symptoms}")
                 
             # Move to next category
             self.current_category_index += 1

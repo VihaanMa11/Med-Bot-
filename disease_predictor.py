@@ -24,16 +24,16 @@ class DiseasePredictor:
         """Load necessary datasets for prediction."""
         try:
             # Load symptom severity data
-            self.symptom_severity = pd.read_csv(f"{self.data_dir}/Symptom-severity.csv")
+            self.symptom_severity = pd.read_csv(f"attached_assets/Symptom-severity.csv")
             
             # Load training data
-            self.training_data = pd.read_csv(f"{self.data_dir}/Training.csv")
+            self.training_data = pd.read_csv(f"attached_assets/Training.csv")
             
             # Get disease descriptions
-            self.disease_descriptions = pd.read_csv(f"{self.data_dir}/description.csv")
+            self.disease_descriptions = pd.read_csv(f"attached_assets/description.csv")
             
             # Get precautions
-            self.precautions = pd.read_csv(f"{self.data_dir}/precautions_df.csv")
+            self.precautions = pd.read_csv(f"attached_assets/precautions_df.csv")
             
             # Extract all unique symptoms from the training data
             # First, get the column names that contain symptoms

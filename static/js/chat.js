@@ -208,8 +208,12 @@ function submitSymptoms() {
     // Show typing indicator
     showTypingIndicator();
     
+    // Convert selectedSymptoms array to JSON string
+    const symptomsJSON = JSON.stringify(selectedSymptoms);
+    console.log("Sending symptoms: ", symptomsJSON);
+    
     // Send the selected symptoms to the server
-    sendDiagnosticResponse(selectedSymptoms);
+    sendDiagnosticResponse(symptomsJSON);
 }
 
 // Select an option in diagnostic mode
