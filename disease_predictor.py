@@ -270,18 +270,18 @@ class DiseasePredictor:
             if disease_rows.empty:
                 return []
             
-            # Collect symptoms from all matching rows
-            all_symptoms = set()
+            # In this dataset, symptoms are columns with value 1 if present
+            common_symptoms = []
+            
+            # Get symptoms present in any row for this disease
             for _, row in disease_rows.iterrows():
-                for col in self.training_data.columns:
-                    if col == 'prognosis':
-                        continue
-                    
-                    if pd.notna(row[col]) and row[col].strip():
-                        all_symptoms.add(row[col])
+                for col in self.symptom_columns:
+                    # If this symptom is marked as present (1) for this disease
+                    if pd.notna(row[col]) and row[col] == 1 and col not in common_symptoms:
+                        common_symptoms.append(col)
             
             # Convert symptoms to more readable format (replace underscores with spaces)
-            readable_symptoms = [s.replace('_', ' ').strip() for s in all_symptoms]
+            readable_symptoms = [s.replace('_', ' ').strip().capitalize() for s in common_symptoms]
             
             return sorted(readable_symptoms)
         except Exception as e:

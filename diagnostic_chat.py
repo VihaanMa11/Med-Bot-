@@ -205,10 +205,12 @@ class DiagnosticChat:
     def get_all_symptoms(self):
         """Get all available symptoms."""
         symptoms = []
+        # Use the symptom categories defined in the predictor
         for category, category_symptoms in self.predictor.get_symptom_categories().items():
             for symptom in category_symptoms:
                 readable = symptom.replace('_', ' ').strip()
                 readable = readable.capitalize()
                 symptoms.append({"symptom": symptom, "display": readable, "category": category})
         
+        logger.debug(f"Returning {len(symptoms)} symptoms across categories")
         return symptoms
