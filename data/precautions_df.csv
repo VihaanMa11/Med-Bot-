@@ -1,0 +1,42 @@
+,Disease,Precaution_1,Precaution_2,Precaution_3,Precaution_4,Link
+0,Drug Reaction,Stop irritation.,Consult nearest hospital.,Stop taking drug.,Follow up with the doctor.,
+1,Malaria,Consult nearest hospital.,Avoid oily food.,Avoid non-veg food.,Keep mosquitos out.,
+2,Allergy,Apply calamine.,"Cover area with Bandage, Mask.",Use ice to compress itching.,Take anti-allergent medicine.,Link for Calamine
+3,Hypothyroidism,Try reducing stress.,Exercise.,Eat healthy food items.,Get proper sleep.,Link for Exercises
+4,Psoriasis,Wash hands with warm soapy water.,"Stop bleeding using pressure, if any.",Consult Dermatologist.,Take salt baths.,Link for Stopping the bleeding wound
+5,GERD,Avoid fatty & spicy food.,Avoid lying down after eating.,Maintain healthy weight.,Exercise.,
+6,Chronic cholestasis,Take cold baths.,Take anti-itch medicine.,Consult Gastroenterologist or Hepatologist,Eat healthy food items.,Link for Anti-Each Cream
+7,hepatitis A,Consult nearest hospital.,Wash hands through.,Avoid fatty & spicy food.,Take Medicines preferred by the AI Dr.,
+8,Osteoarthristis,Take medicine which contain Acetaminophen.,Consult nearest hospital.,Follow up with the doctor.,Take salt baths.,
+9,(vertigo) Paroymsal  Positional Vertigo,Lie down to get some relaxation.,Avoid sudden movements in body.,Avoid abrupt head movments.,Just relax :),
+10,Hypoglycemia,Lie down on side.,Check in pulse.,Drink sugary drinks.,Consult Endocrinologist.,
+11,Acne,Take bath twice a day.,Avoid fatty & spicy food.,Drink plenty of water.,Avoid too many face-care products.,
+12,Diabetes ,Have balanced diet.,Exercise.,Consult Diabetologist or an Endocrinologist.,Follow up with the doctor.,Link for Exercises
+13,Impetigo,Soak affected area in warm water.,Use antibiotics to self-immune body.,Remove scabs with wet compressed cloth.,Consult Dermatologist.,
+14,Hypertension ,Do meditation to self heal mind.,Take salt baths.,Reduce Try reducing stress.,Get proper sleep.,Link for Meditation
+15,Peptic ulcer diseae,Avoid fatty & spicy food.,Consume probiotic food.,Eliminate consumption of milk.,Limit the consumption of alcohol.,Link for Probiotic Supplement
+16,Dimorphic hemmorhoids(piles),Avoid fatty & spicy food.,Consume witch hazel.,Take warm bath with epsom salt.,Consume alovera juice.,Link for benefits of Witch Hazel in piles
+17,Common Cold,Drink vitamin-c rich drinks.,Take vapour.,Avoid cold & pre-processed food.,Keep fever in check.,
+18,Chicken pox,Use neem in bathing.,Consume neem leaves.,Take vaccine.,Avoid public places.,
+19,Cervical spondylosis,Use heating pad or cold pack.,Exercise.,Take otc pain reliver.,Consult Orthopedic.,Link for exercises for Cervical Spondalisis
+20,Hyperthyroidism,Eat healthy food items..,Try taking Massage.,Use lemon balm.,Take radioactive iodine treatment after consulting a doctor.,Link for Hyperthyroidism
+21,Urinary tract infection,Drink plenty of water.,Try increasing the vitamin-c intake.,Drink cranberry juice.,Consume probiotic foods.,
+22,Varicose veins,Lie down flat and raise the leg high.,Use oinments preferred by AI Dr.,Use vein compression.,Dont stand still for long.,Link for Oinment
+23,AIDS,Avoid open cuts.,"Wear PPE kit, if possible.",Consult a doctor specializing in HIV/AIDS treatment.,Follow up with the doctor.,Link for PPE Kit
+24,Paralysis (brain hemorrhage),Try taking massage.,Eat healthy food items..,Exercise.,Consult Neurologist.,
+25,Typhoid,Eat high calorie vegitables.,Take antiboitic therapy.,Consult General Physician.,Take medications preferred by AI Dr.,
+26,Hepatitis B,Consult nearest hospital.,Take vaccination.,Eat healthy food items.,Take medications preferred by AI Dr.,
+27,Fungal infection,Take bath twice a day.,Use detol or neem in bathing water.,Keep infected area dry.,Try wearing clean cloths.,
+28,Hepatitis C,Consult nearest hospital.,Take vaccination.,Eat healthy food items.,Take medications preferred by AI Dr.,
+29,Migraine,Do meditation to self heal mind.,Try reducing stress.,Use poloroid glasses in sun.,Consult Neurologist.,Link for Meditation
+30,Bronchial Asthma,Switch to loose clothing.,Take deep breaths.,"Get away from triggering items, objects.",Try seeking help.,
+31,Alcoholic hepatitis,Stop alcohol consumption.,Consult Gastroenterologist.,Take medications preferred by AI Dr.,Follow up with the doctor.,
+32,Jaundice,Drink plenty of water.,Consume milk thistle.,Eat fruits and high fiberous food.,Take medications preferred by AI Dr.,
+33,Hepatitis E,Stop alcohol consumption.,Try taking rest to avoid worsening of disease.,Consult Gastroenterologis.,Take medications preferred by AI Dr.,
+34,Dengue,Drink papaya leaf juice.,Avoid fatty & spicy food.,Keep mosquitos away.,Keep yourself hydrated.,Link for Papaya Leaf Juice
+35,Hepatitis D,Consult Hepatologist.,Take medications preferred by AI Dr.,Eat healthy food items.,Follow up with the doctor.,
+36,Heart attack,Call ambulance immedietly !!!,Chew or swallow asprin tablet,Keep calm to avoid worsening of disease.,Avoid Food or Drink.,
+37,Pneumonia,Consult General Physician.,Take medications preferred by AI Dr.,Take rest to avoid worsening of disease.,Follow up with the doctor.,
+38,Arthritis,Exercise.,Use hot and cold therapy.,Try acupuncture.,Try getting massage.,Link for Acupunture exercise for Artheritis
+39,Gastroenteritis,Stop eating solid food for a while.,Try taking small sips of water.,Take rest to avoid worsening of disease.,Ease back into eating.,
+40,Tuberculosis,Cover mouth with a clinical mask.,consult doctor,Take medications preferred by AI Dr.,Take rest to avoid worsening of disease.,Link for Exercises

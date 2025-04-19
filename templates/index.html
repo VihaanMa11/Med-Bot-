@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Information Chatbot</title>
+    <title>Health Disease Information Chatbot</title>
     <!-- Bootstrap CSS (Replit dark theme) -->
     <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
     <!-- Font Awesome for icons -->
@@ -16,7 +16,7 @@
         <header class="pb-3 mb-4 border-bottom">
             <div class="d-flex align-items-center text-white">
                 <i class="fas fa-heartbeat fs-2 text-primary me-3"></i>
-                <h1 class="fs-4">Health Information Chatbot</h1>
+                <h1 class="fs-4">Health Disease Information Chatbot</h1>
             </div>
         </header>
 
@@ -24,19 +24,133 @@
             <div class="col-md-3 mb-4">
                 <div class="card h-100">
                     <div class="card-header">
-                        <h5>Health Topics</h5>
+                        <h5>Disease Categories</h5>
                     </div>
                     <div class="card-body">
-                        <div class="list-group">
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Tell me about nutrition')">Nutrition</button>
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('How much exercise do I need?')">Exercise</button>
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Mental health tips')">Mental Health</button>
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('How to improve sleep')">Sleep</button>
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Common cold symptoms')">Common Illnesses</button>
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Preventive care recommendations')">Preventive Care</button>
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Heart health tips')">Heart Health</button>
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Diabetes information')">Diabetes</button>
-                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Weight management advice')">Weight Management</button>
+                        <div class="accordion" id="diseaseAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingInfections">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                            data-bs-target="#collapseInfections" aria-expanded="false" aria-controls="collapseInfections">
+                                        Infections & Diseases
+                                    </button>
+                                </h2>
+                                <div id="collapseInfections" class="accordion-collapse collapse" aria-labelledby="headingInfections">
+                                    <div class="accordion-body p-0">
+                                        <div class="list-group list-group-flush">
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Tell me about Fungal infection')">Fungal infection</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Information about Tuberculosis')">Tuberculosis</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Common Cold')">Common Cold</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Pneumonia')">Pneumonia</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Chicken pox')">Chicken pox</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Dengue')">Dengue</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Typhoid')">Typhoid</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingDigestive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                            data-bs-target="#collapseDigestive" aria-expanded="false" aria-controls="collapseDigestive">
+                                        Digestive System
+                                    </button>
+                                </h2>
+                                <div id="collapseDigestive" class="accordion-collapse collapse" aria-labelledby="headingDigestive">
+                                    <div class="accordion-body p-0">
+                                        <div class="list-group list-group-flush">
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('GERD')">GERD</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Chronic cholestasis')">Chronic cholestasis</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Peptic ulcer disease')">Peptic ulcer disease</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Gastroenteritis')">Gastroenteritis</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Jaundice')">Jaundice</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingHepatitis">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                            data-bs-target="#collapseHepatitis" aria-expanded="false" aria-controls="collapseHepatitis">
+                                        Liver Conditions
+                                    </button>
+                                </h2>
+                                <div id="collapseHepatitis" class="accordion-collapse collapse" aria-labelledby="headingHepatitis">
+                                    <div class="accordion-body p-0">
+                                        <div class="list-group list-group-flush">
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('hepatitis A')">Hepatitis A</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Hepatitis B')">Hepatitis B</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Hepatitis C')">Hepatitis C</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Hepatitis D')">Hepatitis D</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Hepatitis E')">Hepatitis E</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Alcoholic hepatitis')">Alcoholic hepatitis</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingChronic">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                            data-bs-target="#collapseChronic" aria-expanded="false" aria-controls="collapseChronic">
+                                        Chronic Conditions
+                                    </button>
+                                </h2>
+                                <div id="collapseChronic" class="accordion-collapse collapse" aria-labelledby="headingChronic">
+                                    <div class="accordion-body p-0">
+                                        <div class="list-group list-group-flush">
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Diabetes')">Diabetes</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Bronchial Asthma')">Bronchial Asthma</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Hypertension')">Hypertension</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Migraine')">Migraine</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Cervical spondylosis')">Cervical spondylosis</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Osteoarthristis')">Osteoarthristis</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Arthritis')">Arthritis</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('(vertigo) Paroymsal Positional Vertigo')">(vertigo) Paroymsal Positional Vertigo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOther">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                            data-bs-target="#collapseOther" aria-expanded="false" aria-controls="collapseOther">
+                                        Other Conditions
+                                    </button>
+                                </h2>
+                                <div id="collapseOther" class="accordion-collapse collapse" aria-labelledby="headingOther">
+                                    <div class="accordion-body p-0">
+                                        <div class="list-group list-group-flush">
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Allergy')">Allergy</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Drug Reaction')">Drug Reaction</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('AIDS')">AIDS</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Paralysis (brain hemorrhage)')">Paralysis (brain hemorrhage)</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Malaria')">Malaria</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Heart attack')">Heart attack</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Varicose veins')">Varicose veins</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Hypoglycemia')">Hypoglycemia</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Hypothyroidism')">Hypothyroidism</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Hyperthyroidism')">Hyperthyroidism</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSkin">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                            data-bs-target="#collapseSkin" aria-expanded="false" aria-controls="collapseSkin">
+                                        Skin Conditions
+                                    </button>
+                                </h2>
+                                <div id="collapseSkin" class="accordion-collapse collapse" aria-labelledby="headingSkin">
+                                    <div class="accordion-body p-0">
+                                        <div class="list-group list-group-flush">
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Acne')">Acne</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Psoriasis')">Psoriasis</button>
+                                            <button class="list-group-item list-group-item-action" onclick="suggestTopic('Impetigo')">Impetigo</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -54,7 +168,7 @@
                         <div id="chat-container" class="mb-3">
                             <div class="message bot-message">
                                 <div class="message-content">
-                                    <p>Hello! I'm your Health Information Assistant. How can I help you today? You can ask me about nutrition, exercise, mental health, common illnesses, and more.</p>
+                                    <p>Hello! I'm your Health Disease Information Assistant. How can I help you today? You can ask me about various diseases and health conditions like Diabetes, Asthma, Hepatitis, or select a topic from the left panel.</p>
                                 </div>
                             </div>
                         </div>
@@ -74,17 +188,13 @@
                         <h5>About This Chatbot</h5>
                     </div>
                     <div class="card-body">
-                        <p>This Health Information Chatbot uses natural language processing to provide reliable health information based on your questions. It can answer questions about:</p>
+                        <p>This Health Disease Information Chatbot uses natural language processing with NLTK to provide reliable health information about various diseases and medical conditions. For each disease, it can provide:</p>
                         <ul>
-                            <li>Nutrition and diet</li>
-                            <li>Exercise and physical activity</li>
-                            <li>Mental health and wellness</li>
-                            <li>Sleep hygiene</li>
-                            <li>Common illnesses and symptoms</li>
-                            <li>Preventive healthcare</li>
-                            <li>Heart health</li>
-                            <li>Diabetes</li>
-                            <li>Weight management</li>
+                            <li>Descriptions and general information</li>
+                            <li>Common symptoms</li>
+                            <li>Recommended precautions</li>
+                            <li>Dietary recommendations</li>
+                            <li>Common medications and treatments</li>
                         </ul>
                         <div class="alert alert-info">
                             <i class="fas fa-info-circle me-2"></i>
@@ -97,7 +207,7 @@
 
         <footer class="pt-3 mt-4 text-muted border-top">
             <div class="d-flex justify-content-between align-items-center">
-                <div>&copy; 2023 Health Information Chatbot</div>
+                <div>&copy; 2025 Health Disease Information Chatbot</div>
                 <div>Powered by NLTK and Flask</div>
             </div>
         </footer>

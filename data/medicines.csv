@@ -1,0 +1,181 @@
+﻿Disease,Medicine
+Fungal infection,"['Flucos by Cipla | Dosage - (T1-0-0-0) | # Tablet taken once daily for fungal infections.',
+    'sebifin by Sun Pharma | Dosage - (T1-0-0-0) | # Tablet taken once daily.',
+    'Candid by Glenmark | Dosage - (O1-O1-0-O1) | # Cream applied morning, afternoon, and night.',
+    'Nizoral by Johnson & Johnson | Dosage - (O1-0-0-O1) | # Cream applied morning and night.'
+]"
+Allergy,"['Cetirizine by GSK | Dosage - (T1-0-0-0) | # Antihistamine, typically taken once daily in the morning.',
+    'Phenylephrine by Cipla | Dosage - (0-T1-0-0) | # Decongestant, usually taken in the afternoon as needed.',
+    'Dexamethasone by Zydus | Dosage - (0-T1-0-T1) | # Corticosteroid, typically twice a day for short durations.',
+    'Epipen | Dosage - (I1-0-0-I1) | # Epinephrine injection, emergency use only as prescribed.'
+]"
+GERD,"['Digene by Abbott | Dosage - (T1-0-T1-0) | # Usually taken after meals, so morning and evening.',
+    'Eno by GSK | Dosage - (T1-T1-T1-T1) | # Can be taken as needed for acidity relief.',
+    'Itopride by Abbott | Dosage - (T1-T1-T1-0) | # Often prescribed three times a day before meals.',
+    'Azithromycin by Alembic | Dosage - (T1-0-0-0) | # Typically once daily for 3-5 days, usually in the morning.'
+]"
+Chronic cholestasis,"['Udiliv by Abbott | Dosage - (T1-0-T1-0) | # Tablet taken twice daily, morning and evening, often for liver support.',
+    'Methotrexate by Cipla | Dosage - (T1-0-0-0) | # Tablet taken once weekly (usually on the same day), typically in the morning for autoimmune conditions.',
+    'Dexamethasone by Zydus | Dosage - (0-T1-0-T1) | # Tablet taken twice daily, afternoon and night, usually for inflammation or allergies.'
+] "
+Drug Reaction,"['Cetirizine by GSK | Dosage - (T1-0-0-0) | # Tablet once in the morning, commonly used for allergies.',
+    'EpiPen | Dosage - (I1-0-0-I1) | # Injection once in the morning and once at night for emergencies (only as needed).',
+    'Dexamethasone by Zydus | Dosage - (0-T1-0-T1) | # Tablet twice daily, afternoon and night, for inflammation or allergies.',
+    'Amoxicillin by GSK | Dosage - (T1-T1-T1-0) | # Tablet three times daily (morning, afternoon, and evening) for bacterial infections.'
+]"
+Peptic ulcer disease,"['Amoxicillin by GSK | Dosage - (T1-T1-T1-0) | # Tablet three times daily for infections',
+    'Pantoprazole by Sun Pharma | Dosage - (T1-0-0-0) | # Tablet once daily in the morning before meals for acidity or reflux.',
+    'Cimetidine by Zydus | Dosage - (T1-0-0-T1) | # Tablet twice daily, morning and night, for gastric ulcers or acid reflux.',
+    'Digene by Abbott | Dosage - (T1-T1-0-0) | # Tablet or chewable, twice daily, morning and afternoon for acidity relief.'
+]"
+AIDS,"['Zidovudine by Zidovir | Dosage - (T1-T1-0-0) | # Typically, 300 mg twice daily for HIV treatment.',
+    'Atazanavir by Atazor | Dosage - (0-T1-0-0) | # Often 300 mg once daily with food.',
+    'Elvitegravir by Vitekta | Dosage - (0-0-0-T1) | # Usually taken once daily with food as part of a regimen.',
+    'Maraviroc by Celsentri | Dosage - (T1-0-T1-0) | # Typically taken twice daily; dosage may vary based on other medications.'
+]"
+Diabetes,"['Insulin Aspart by NovoRapid | Dosage - (I1-I1-I1-0) | # Rapid-acting insulin, typically administered before meals.',
+    'Metformin by Glyciphage | Dosage - (T1-0-T1-0) | # Commonly 500-1000 mg twice daily, with or after meals.',
+    'Glipizide by Glucotrol | Dosage - (T1-0-T1-0) | # Often taken 30 minutes before meals, twice daily.',
+    'Liraglutide by Victoza | Dosage - (I1-0-0-0) | # Usually injected once daily, consistent timing preferred.'
+]"
+Gastroenteritis,"['Amoxicillin by Amoxil | Dosage - (T1-T1-T1-0) | # Commonly taken 500 mg three times daily.',
+    'Granisetron by Granicip | Dosage - (T1-0-T1-0) | # Often 1 mg twice daily before meals for nausea.',
+    'Loperamide by Lopamide | Dosage - (T1-0-0-0) | # Typically taken once daily, as needed for diarrhea control.'
+]"
+Bronchial Asthma,"[salbutamol by Asthalin | Dosage - (I1-0-I1-0) | # Inhaler: 1-2 puffs as needed, typically twice daily for asthma relief.',
+    'Budesonide by Budecort | Dosage - (I1-0-I1-0) | # Inhaler: 1-2 puffs twice daily for anti-inflammatory control in asthma.',
+    'Zafirlukast by Accolate | Dosage - (T1-0-0-0) | # Tablet: 10-20 mg once daily, often at bedtime, to manage asthma symptoms.',
+    'Cromolyn Sodium by Cromal | Dosage - (I1-I1-0-0) | # Inhaler or nebulizer: typically 1 puff/inhalation twice daily.',
+    'Ipratropium Bromide by Ipravent | Dosage - (I1-0-I1-0) | # Inhaler: 1-2 puffs twice daily for bronchodilation in respiratory conditions.'
+]"
+Hypertension,"['Telmisartan by Telma | Dosage - (T1-0-0-0) | # Tablet: 20-40 mg once daily for hypertension management.',
+    'Hydrochlorothiazide by Hydrochlorothiazide | Dosage - (T1-0-0-0) | # Tablet: 12.5-25 mg once daily, typically in the morning as a diuretic.',
+    'Atenolol by Tenormin | Dosage - (T1-0-0-0) | # Tablet: 25-50 mg once daily, usually taken in the morning for blood pressure or heart rate control.',
+    'Enalapril by Enapril | Dosage - (T1-0-0-0) | # Tablet: 5-10 mg once daily, typically for blood pressure management.'
+]"
+Migraine,"['Paracetamol by Crocin | Dosage - (T1-T1-T1-0) | # Tablet: 500 mg to 650 mg every 4-6 hours as needed for pain or fever relief (max 4 doses per day).',
+    sumatriptan by Suminat | Dosage - (T1-0-0-0) | # Tablet: 50-100 mg as a single dose for acute migraine, up to a maximum of 200 mg in 24 hours.',
+    'Topiramate by Topaz | Dosage - (0-T1-0-T1) | # Tablet: Gradually increased to 50-100 mg twice daily for migraine prevention.'
+]"
+Cervical spondylosis,"['Paracetamol by Crocin | Dosage - (T1-T1-T1-0) | # Tablet: 500 mg every 4-6 hours as needed, up to 3-4 times per day.',
+    'Cyclobenzaprine by Flexura | Dosage - (T1-0-T1-0) | # Tablet: 5-10 mg once or twice daily as needed, based on muscle pain severity.'
+]"
+Paralysis (brain hemorrhage),"['Aspirin by Disprin | Dosage - (T1-T1-0-0) | # Tablet: Typically 75-300 mg once or twice daily for pain relief or blood thinning.',
+    'Phenytoin by Eptoin | Dosage - (T1-T1-0-T1) | # Tablet: Usually 100 mg taken two to three times daily, depending on seizure control needs.'
+]"
+Jaundice,"[Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: Typically 500 mL to 1 liter per day for adults.', 
+    'Cetirizine by Cetzine | Dosage - (T1-0-0-0) | # Tablet: 10 mg once daily for adults and children over 6 years.',
+    'Valacyclovir by Valtrex | Dosage - (T1-T1-0-T1)  | # Tablet: 500 mg twice daily for HSV, 1,000 mg three times daily for shingles.',
+]"
+Malaria,"['Chloroquine by Chloroquine | Dosage - (T1-T1-0-T1) | # Tablet: 250 mg once or twice a week for malaria prophylaxis or 500 mg twice daily for 3 days for acute malaria.',
+    'Paracetamol by Crocin | Dosage - (T1-T1-0-0) | # Tablet: 500 mg to 1 gram every 4-6 hours as needed, not exceeding 4 grams per day.',
+    'Metoclopramide by Metozolv | Dosage - (T1-T1-0-0) | # Tablet: 10 mg three times daily before meals for nausea or vomiting.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: Typically 500 mL to 1 liter per day for adults, adjusted based on clinical condition.'
+]"
+Chicken pox,"['Remdesivir by Remdac | Dosage - (I1-I1-0-T1) | # Injection: Typically, 200 mg IV once on Day 1, followed by 100 mg IV daily for 4-9 days depending on clinical response.',
+    'Paracetamol by Crocin | Dosage - (T1-T1-0-0) | # Tablet: 500 mg to 1 gram every 4-6 hours as needed, not exceeding 4 grams per day.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: Typically 500 mL to 1 liter per day for adults, adjusted based on clinical condition.'
+] "
+Dengue,"['Amoxicillin by Mox | Dosage - (T1-T1-0-T1) | # Tablet: 500 mg every 8 hours for mild to moderate infections; may vary based on infection severity.',
+    'Ibuprofen by Brufen | Dosage - (T1-T1-0-0) | # Tablet: 200-400 mg every 4-6 hours as needed for pain or inflammation, not exceeding 1,200 mg per day.',
+    'Diclofenac by Voveran | Dosage - (T1-T1-0-0) | # Tablet: 50 mg two or three times daily for pain or inflammation management.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: 500 mL to 1 liter per day, adjusted based on clinical condition.',
+    'Dexamethasone by Dexona | Dosage - (T1-T1-0-0) | # Tablet: 0.5 mg to 2 mg per day, divided into 2-4 doses, depending on the condition being treated.'
+]"
+Typhoid,"['Typhoid Vaccine by Typhim Vi | Dosage - (I1-0-0-0) | # Injection: 0.5 mL single dose administered intramuscularly or subcutaneously for typhoid prevention. One dose every 2 years.',
+    'Remdesivir by Remdac | Dosage - (I1-I1-0-T1) | # Injection: 200 mg IV on Day 1, followed by 100 mg IV daily for 4-9 days depending on clinical condition.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: 500 mL to 1 liter per day for adults, adjusted based on clinical condition.'
+]"
+hepatitis A,"['Hepatitis B Vaccine by Recombivax HB | Dosage - (I1-0-0-0) | # Injection: 1 mL (20 mcg) as a single dose for primary vaccination. Additional doses at 1 and 6 months for complete vaccination.',
+    'Remdesivir by Remdac | Dosage - (I1-I1-0-T1) | # Injection: 200 mg IV on Day 1, followed by 100 mg IV daily for 4-9 days, depending on clinical response.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: 500 mL to 1 liter per day, adjusted based on clinical condition.'
+]"
+Hepatitis B,"['Hepatitis B Vaccine by Recombivax HB | Dosage - (I1-0-0-0) | # Injection: 1 mL (20 mcg) as a single dose for primary vaccination. Additional doses at 1 and 6 months for complete vaccination.',
+    'Remdesivir by Remdac | Dosage - (I1-I1-0-I1) | # Injection: 200 mg IV on Day 1, followed by 100 mg IV daily for 4-9 days, depending on clinical response.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: 500 mL to 1 liter per day, adjusted based on clinical condition.'
+]"
+Hepatitis C,"['Remdesivir by Remdac | Dosage - (I1-I1-0-I1) | # Injection: 200 mg IV on Day 1, followed by 100 mg IV daily for 4-9 days, depending on clinical response.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: 500 mL to 1 liter per day, adjusted based on clinical condition.'
+]"
+Hepatitis D,"['Remdesivir by Remdac | Dosage - (I1-I1-0-I1) | # Injection: 200 mg IV on Day 1, followed by 100 mg IV daily for 4-9 days, depending on clinical response.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: 500 mL to 1 liter per day, adjusted based on clinical condition.'
+]"
+Hepatitis E,"['Disulfiram by Antabuse | Dosage - (T1-0-0-0) | # Tablet: 250 mg to 500 mg once daily for alcohol dependence treatment; dosage may vary based on clinical response.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: 500 mL to 1 liter per day, adjusted based on clinical condition.',
+    'Dexamethasone by Dexona | Dosage - (T1-T1-0-0) | # Tablet: 0.5 mg to 6 mg daily, divided into 2-4 doses, depending on the condition being treated.',
+    'Vitamin B Complex Tablets | Dosage - (T1-0-0-0) | # Tablet: 1 tablet once daily, or as directed by the doctor, for vitamin B deficiencies or supplementation.'
+]"
+Alcoholic hepatitis,"['Amoxicillin by Mox | Dosage - (T1-T1-0-T1) | # Tablet: 500 mg every 8 hours for mild to moderate infections; dosage may vary based on infection severity.',
+    'Isoniazid by Isozid | Dosage - (T1-T1-0-0) | # Tablet: 300 mg once daily for tuberculosis (TB) treatment, usually for 6-9 months.',
+    'Rifampin by Rifadin | Dosage - (T1-T1-0-0) | # Capsule: 10 mg/kg body weight (up to 600 mg)',
+    'Ethambutol by Myambutol | Dosage - (T1-T1-0-0) | # Tablet: 15 mg/kg body weight once daily for TB treatment, adjusted based on clinical condition.',
+    'Pyrazinamide by Zinamide | Dosage - (T1-T1-0-0) | # Tablet: 25 mg/kg body weight once daily for TB treatment, usually for the first 2 months.'
+]"
+Tuberculosis,"['Amoxicillin by Mox | Dosage - (T1-T1-0-T1) | # Tablet: 500 mg every 8 hours for mild to moderate infections; dosage may vary based on infection severity.',
+    'Isoniazid by Isozid | Dosage - (T1-T1-0-0) | # Tablet: 300 mg once daily for tuberculosis (TB) treatment, usually for 6-9 months.',
+    'Rifampin by Rifadin | Dosage - (T1-T1-0-0) | # Capsule: 10 mg/kg body weight (up to 600 mg) once daily for TB treatment, typically for 6 months.',
+    'Ethambutol by Myambutol | Dosage - (T1-T1-0-0) | # Tablet: 15 mg/kg body weight once daily for TB treatment, adjusted based on clinical condition.',
+    'Pyrazinamide by Zinamide | Dosage - (T1-T1-0-0) | # Tablet: 25 mg/kg body weight once daily for TB treatment, usually for the first 2 months.'
+]"
+Common Cold,"['Azithromycin by Azithral | Dosage - (T1-0-0-T1) | # Tablet: 500 mg once daily for 3 to 5 days for bacterial infections.',
+    'Oseltamivir by Tamiflu | Dosage - (T1-T1-0-0) | # Capsule: 75 mg twice daily for 5 days for treatment of influenza, start within 48 hours of symptoms.',
+    'Fluconazole by Flucos | Dosage - (T1-T1-0-0) | # Tablet: 150 mg once for a single dose for vaginal candidiasis, or 50-200 mg daily for other fungal infections.',
+    'Dextrose Solutions by Dextrose | Dosage - (I1-I1-0-0) | # IV solution: 500 mL to 1 liter per day, adjusted based on clinical condition for hydration and energy support.'
+]"
+Pneumonia,"['Isabgol by Sat-Isabgol | Dosage - (P1-0-0-P1) | # Powder: 1-2 teaspoons (3-6 grams) once or twice daily, mixed with water or milk, for constipation relief.',
+ 'Paracetamol by Crocin | Dosage - (T1-0-0-T1) | # Tablet: 500 mg to 1000 mg every 4-6 hours as needed for pain or fever relief, not exceeding 4 grams in 24 hours.'
+]"
+Dimorphic hemmorhoids(piles),"['Nitroglycerin by Nitrocontin | Dosage - (T1-0-0-0) | # Tablet: 1 tablet (2.5 mg to 6.5 mg) sublingually as needed for angina or chest pain. Dosage can be repeated every 5 minutes if required, up to 3 doses.',
+    'Aspirin by Ecosprin | Dosage - (T1-T1-0-0) | # Tablet: 75 mg to 150 mg once daily for prevention of heart attacks, strokes, or blood clot formation.',
+    'Metoprolol by Metocard | Dosage - (T1-T1-0-0) | # Tablet: 25 mg to 100 mg once or twice daily for hypertension, angina, or heart failure.',
+    'Amlodipine by Amlong | Dosage - (T1-0-0-0) | # Tablet: 5 mg to 10 mg once daily for hypertension and angina.',
+    'streptokinase by Streptase | Dosage - (I1-I1-0-0) | # Injection: 1.5 million IU IV infusion over 60 minutes for acute myocardial infarction (heart attack).'
+]"
+Heart attack,['Immediate treatment required at the nearest hospital!']
+Varicose veins,"['Levothyroxine by Thyronorm | Dosage - (T1-0-0-0) | # Tablet: 25 mcg to 100 mcg once daily for hypothyroidism, adjusted based on thyroid hormone levels.',
+    'Methimazole by Methizole | Dosage - (T1-T1-0-0) | # Tablet: 5 mg to 20 mg daily, divided into 2-3 doses, for hyperthyroidism, adjusted based on thyroid function tests.',
+    'Propranolol by Inderal | Dosage - (T1-T1-0-0) | # Tablet: 40 mg to 160 mg per day, divided into 2 doses, for hypertension, angina, or arrhythmias.'
+]"
+Hypothyroidism,"['Methimazole by Methizole | Dosage - (T1-T1-0-0) | # Tablet: 5 mg to 20 mg daily, divided into 2-3 doses, for hyperthyroidism, adjusted based on thyroid function tests.',
+    'Propranolol by Inderal | Dosage - (T1-T1-0-0) | # Tablet: 40 mg to 160 mg per day, divided into 2 doses, for hypertension, angina, or arrhythmias.',
+    'Prednisone by Omnacortil | Dosage - (T1-T1-0-0) | # Tablet: 5 mg to 60 mg daily, depending on the condition being treated (e.g., autoimmune diseases, inflammation).'
+]"
+Hyperthyroidism,"['Glucon-D | Dosage - (P1-0-0-0) | # Powder: 1-2 teaspoons dissolved in 200-250 mL of water, typically for quick energy replenishment or to manage low blood sugar.
+    'Glucagon Injection | Dosage - (I1-0-0-0) | # Injection: 1 mg (1 vial) injected intramuscularly or subcutaneously for severe hypoglycemia; may be repeated after 15 minutes if needed.',
+    'Diazoxide by Diaformin | Dosage - (T1-T1-0-0) | # Tablet: 100 mg to 200 mg once or twice daily for managing hypoglycemia or hyperinsulinism.'
+]"
+Hypoglycemia,"['Paracetamol by Crocin | Dosage - (T1-0-0-T1)  # Tablet: 500 mg to 1000 mg every 4-6 hours as needed for pain or fever relief, not exceeding 4000 mg in 24 hours.']"
+Osteoarthristis,"['Ibuprofen by Brufen | Dosage - (T1-T1-0-T1) | # Tablet: 200 mg to 400 mg every 4-6 hours as needed for pain or inflammation, not exceeding 1200 mg per day.',
+    'Hydroxychloroquine by Plaquenil | Dosage - (T1-T1-0-0) | # Tablet: 200 mg to 400 mg daily for malaria or autoimmune diseases (e.g., lupus, rheumatoid arthritis).',
+    'Infliximab by Remicade | Dosage - (I1-0-0-0) | # Infusion: 3 mg/kg body weight, typically administered every 6 to 8 weeks for autoimmune diseases like rheumatoid arthritis or Crohns disease.',
+    'Hydrocortisone by Cortef | Dosage - (T1-T1-0-T1) | # Tablet: 20 mg to 50 mg daily, divided into 2-3 doses, for conditions like adrenal insufficiency or inflammation.'
+]"
+Arthritis,"['Meclizine by Vertin | Dosage - (T1-0-0-T1) | # Tablet: 25 mg to 50 mg once daily for motion sickness, vertigo, or nausea.',
+    'Diazepam by Valium | Dosage - (T1-0-0-T1) | # Tablet: 2 mg to 10 mg, usually taken 1 to 3 times daily for anxiety, seizures, or muscle spasms.',
+    'Dimenhydrinate by Dramamine | Dosage - (T1-0-0-T1) | # Tablet: 50 mg to 100 mg every 4-6 hours as needed for motion sickness, nausea, or vertigo.'
+]"
+(vertigo) Paroymsal Positional Vertigo,"['Benzoyl Peroxide by Persol | Dosage - (O1-0-0-0) | # Ointment: Apply a thin layer to the affected area once or twice daily for acne treatment, depending on skin tolerance.',
+    'Clindamycin by Dalacin C | Dosage - (T1-T1-0-0) | # Tablet: 150 mg to 300 mg every 6-8 hours for bacterial infections, depending on severity.',
+    'Clinsol Tetracycline by Tetra | Dosage - (T1-T1-0-0) | # Tablet: 250 mg to 500 mg every 6-12 hours for bacterial infections like acne or respiratory infections.,
+]"
+Acne,"['Amoxicillin by Mox | Dosage - (T1-T1-0-T1) | # Tablet: 500 mg to 1000 mg every 8 hours for bacterial infections.',
+    'Paracetamol by Crocin | Dosage - (T1-0-0-T1) | # Tablet: 500 mg to 1000 mg every 4-6 hours as needed for pain or fever relief, not exceeding 4000 mg in 24 hours.',
+    'Cetirizine by Cetzine | Dosage - (T1-0-0-T1) | # Tablet: 10 mg once daily for allergies, hay fever, or rhinitis.',
+    'Prednisolone by Omnacortil | Dosage - (T1-T1-0-T1) | # Tablet: 5 mg to 60 mg daily, divided into 2-3 doses, for inflammatory conditions, allergies, or autoimmune diseases.'
+]"
+Urinary tract infection,"['Amoxicillin by Mox | Dosage - (T1-T1-0-T1) | # Tablet: 500 mg to 1000 mg every 8 hours for bacterial infections.',
+    'Paracetamol by Crocin | Dosage - (T1-0-0-T1) | # Tablet: 500 mg to 1000 mg every 4-6 hours as needed for pain or fever relief, not exceeding 4000 mg in 24 hours.',
+    'Cetirizine by Zyrtec | Dosage - (T1-0-0-T1) | # Tablet: 10 mg once daily for allergies, hay fever, or rhinitis.',
+    'Prednisolone by Predmet | Dosage - (T1-T1-0-T1) | # Tablet: 5 mg to 60 mg daily, divided into 2-3 doses, for inflammatory conditions, allergies, or autoimmune diseases.',
+    'Clotrimazole by Candid | Dosage - (O1-0-0-0) |  # Ointment: Apply a thin layer to the affected area 1-2 times daily for fungal infections (e.g., athletes foot, ringworm, vaginal infections).'
+]"
+Psoriasis,"['Amoxicillin by Mox | Dosage - (T1-T1-0-T1) | # Tablet: 500 mg to 1000 mg every 8 hours for bacterial infections.',
+    'Flavoxate by Bladderon | Dosage - (T1-T1-0-T1) | # Tablet: 100 mg to 200 mg every 8 hours for urinary tract disorders or bladder spasms.',
+    'Dicyclomine by Cyclopam | Dosage - (T1-0-0-T1) | # Tablet: 10 mg to 20 mg every 4-6 hours as needed for abdominal pain, cramps, or irritable bowel syndrome.',
+    'Lactobacillus by Sporlac | Dosage - (T1-0-0-T1) | # Capsule: 1 to 2 capsules per day for maintaining gut health or after antibiotic therapy.'
+]"
+Impetigo,"['Clobetasol by Tenovate | Dosage - (O1-0-0-0) | # Ointment: Apply a thin layer to the affected area 1-2 times daily for inflammatory skin conditions.',
+    'Methoxsalen by 8-MOP | Dosage - (T1-0-0-T1) | # Tablet: 10 mg to 40 mg before UV exposure, typically 1 to 2 hours prior to treatment, for psoriasis.',
+    'Methotrexate by Trexall | Dosage - (T1-0-0-T1) | # Tablet: 7.5 mg to 25 mg once a week for rheumatoid arthritis or cancer treatment, dosage may vary based on condition.',
+    'Adalimumab by Humira | Dosage - (I1-0-0-I1) | # Injection: 40 mg subcutaneously every other week for autoimmune diseases like rheumatoid arthritis, Crohns disease'
+]"

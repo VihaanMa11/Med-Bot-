@@ -6,12 +6,29 @@ const clearChatButton = document.getElementById('clearChat');
 
 // Add event listeners
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize event listeners
     chatForm.addEventListener('submit', handleChatSubmit);
     clearChatButton.addEventListener('click', clearChat);
+    
+    // Load diseases list for autocomplete (future enhancement)
+    loadDiseasesList();
     
     // Auto-scroll chat to bottom on load
     scrollToBottom();
 });
+
+// Load diseases list from server
+function loadDiseasesList() {
+    fetch('/api/diseases')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Loaded diseases list:', data.diseases.length);
+            // Here we could implement autocomplete functionality
+        })
+        .catch(error => {
+            console.error('Error loading diseases:', error);
+        });
+}
 
 // Handle chat form submission
 function handleChatSubmit(e) {
@@ -106,16 +123,25 @@ function sendMessage(message) {
         return response.json();
     })
     .then(data => {
-        // Add bot response to chat
+        // Add bot response to chat with slight delay to simulate thinking
         setTimeout(() => {
             addMessage(data.response, 'bot');
-        }, 800); // Slight delay to simulate thinking time
+            
+            // Add interactive elements to the chat if needed
+            addInteractiveElements();
+        }, 800);
     })
     .catch(error => {
         console.error('Error:', error);
         removeTypingIndicator();
         addMessage('Sorry, I encountered an error processing your question. Please try again.', 'bot');
     });
+}
+
+// Add interactive elements to the chat (for future enhancements)
+function addInteractiveElements() {
+    // This function could add interactive buttons or other elements to the chat
+    // For example, suggesting related diseases or symptoms
 }
 
 // Scroll to bottom of chat container

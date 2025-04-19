@@ -2,7 +2,7 @@ import os
 import logging
 from flask import Flask, render_template, request, jsonify
 from nlp_processor import process_query
-from health_data import initialize_health_data
+from data_processor import initialize_health_data
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -38,6 +38,16 @@ def chat():
     except Exception as e:
         logger.error(f"Error processing chat request: {str(e)}")
         return jsonify({'response': 'Sorry, I encountered an error processing your question. Please try again.'})
+
+@app.route('/api/diseases', methods=['GET'])
+def get_diseases():
+    """Return a list of all diseases in the knowledge base"""
+    try:
+        diseases = sorted(list(health_knowledge_base.keys()))
+        return jsonify({'diseases': diseases})
+    except Exception as e:
+        logger.error(f"Error retrieving diseases: {str(e)}")
+        return jsonify({'diseases': []}), 500
 
 @app.errorhandler(404)
 def page_not_found(e):
